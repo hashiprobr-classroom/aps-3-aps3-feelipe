@@ -18,7 +18,7 @@ public class Central {
         int soma = 0;
         int cont = 0;
         for (Corrida corrida : corridas){
-            if (cpfPassageiro.equals(corrida.getPassageiro().getCpf()) && corrida.getNotaPassageiro() != 0){
+            if (corrida.getPassageiro() != null && cpfPassageiro.equals(corrida.getPassageiro().getCpf()) && corrida.getNotaPassageiro() != 0){
                 soma += corrida.getNotaPassageiro();
                 cont +=1;
            }
@@ -34,7 +34,7 @@ public class Central {
         int soma = 0;
         int cont = 0;
         for (Corrida corrida : corridas){
-            if (cpfMotorista.equals(corrida.getMotorista().getCpf()) && corrida.getNotaMotorista() != 0){
+            if (corrida.getMotorista() != null && cpfMotorista.equals(corrida.getMotorista().getCpf()) && corrida.getNotaMotorista() != 0){
                 soma += corrida.getNotaMotorista();
                 cont +=1;
             }
